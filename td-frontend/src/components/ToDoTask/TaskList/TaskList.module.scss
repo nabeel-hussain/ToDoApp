@@ -1,0 +1,169 @@
+.overDueTask,
+.overDueTask .Mui-selected {
+   background-color: #fef2f2;
+   border-left: 3px solid #ef4444;
+}
+.overDueTask:hover {
+   background-color: #fee2e2 !important;
+}
+.customBox {
+   height: 650px !important;
+   min-height: 500px;
+   display: flex;
+   flex-direction: column;
+   
+   :global {
+      .MuiDataGrid-root {
+         border: 1px solid #e5e7eb;
+         border-radius: 12px;
+         box-shadow: none;
+         font-family: inherit;
+      }
+      
+      .MuiDataGrid-columnHeaders {
+         background-color: #f9fafb;
+         border-bottom: 2px solid #e5e7eb;
+         border-radius: 12px 12px 0 0;
+         
+         .MuiDataGrid-columnHeaderTitle {
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+         }
+      }
+      
+      .MuiDataGrid-cell {
+         border-bottom: 1px solid #f3f4f6;
+         font-size: 14px;
+         color: #1f2937;
+         
+         &:focus {
+            outline: none;
+         }
+      }
+      
+      .MuiDataGrid-row {
+         &:hover {
+            background-color: #f9fafb;
+         }
+         
+         &.Mui-selected {
+            background-color: #eff6ff;
+            
+            &:hover {
+               background-color: #dbeafe;
+            }
+         }
+      }
+      
+      .MuiDataGrid-footerContainer {
+         border-top: 2px solid #e5e7eb;
+         background-color: #f9fafb;
+      }
+      
+      .MuiTabs-root {
+         min-height: 42px;
+         border-bottom: 1px solid #e5e7eb;
+         
+         .MuiTab-root {
+            min-height: 42px;
+            text-transform: none;
+            font-weight: 500;
+            font-size: 14px;
+            color: #6b7280;
+            
+            &.Mui-selected {
+               color: #3b82f6;
+            }
+         }
+         
+         .MuiTabs-indicator {
+            background-color: #3b82f6;
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+         }
+      }
+      
+      .MuiTextField-root {
+         .MuiOutlinedInput-root {
+            border-radius: 8px;
+            background-color: #f9fafb;
+            
+            &:hover {
+               background-color: #f3f4f6;
+            }
+            
+            &.Mui-focused {
+               background-color: white;
+            }
+            
+            fieldset {
+               border-color: #e5e7eb;
+            }
+            
+            &:hover fieldset {
+               border-color: #d1d5db;
+            }
+            
+            &.Mui-focused fieldset {
+               border-color: #3b82f6;
+               border-width: 2px;
+            }
+         }
+      }
+      
+      .MuiSelect-root {
+         border-radius: 8px;
+      }
+      
+      .MuiFormControl-root {
+         .MuiOutlinedInput-root {
+            border-radius: 8px;
+            background-color: #f9fafb;
+            
+            &:hover {
+               background-color: #f3f4f6;
+            }
+            
+            &.Mui-focused {
+               background-color: white;
+            }
+         }
+      }
+      
+      .MuiPagination-root {
+         .MuiPaginationItem-root {
+            border-radius: 6px;
+            font-weight: 500;
+            
+            &.Mui-selected {
+               background-color: #3b82f6;
+               color: white;
+               
+               &:hover {
+                  background-color: #2563eb;
+               }
+            }
+         }
+      }
+   }
+}
+
+.doneTask {
+   text-decoration: line-through;
+   opacity: 0.5;
+   background-color: #fafafa;
+   color: #9ca3af;
+}
+
+.gridStyle {
+   text-align: right;
+   padding-right: 30px;
+}
+
+// Responsive adjustments
+@media (max-width: 600px) {
+   .customBox {
+      height: 500px !important;
+   }
+}
